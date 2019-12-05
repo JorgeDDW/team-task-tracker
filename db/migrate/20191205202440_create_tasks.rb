@@ -2,12 +2,12 @@ class CreateTasks < ActiveRecord::Migration[6.0]
   def change
     create_table :tasks do |t|
       t.string :name
-      t.reference :assigned
+      t.references :assigned
       t.text :content
       t.date :due_date
-      t.reference :tag
+      t.references :tag
       t.boolean :status
-      t.reference :creator
+      t.references :creator
       t.integer :time
 
       t.timestamps
