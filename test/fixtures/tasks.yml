@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  assigned: 
+  content: MyText
+  due_date: 2019-12-05
+  tag: 
+  status: false
+  creator: 
+  time: 1
+
+two:
+  name: MyString
+  assigned: 
+  content: MyText
+  due_date: 2019-12-05
+  tag: 
+  status: false
+  creator: 
+  time: 1
