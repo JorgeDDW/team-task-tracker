@@ -1,24 +1,27 @@
-# README
+# Team Task Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a mixture between Toggl (Measure Time by task, project and clients), Todoist (Organize task for your-self and your team) and Pomodoro (25 minutes working sessions shifting with a 5 minute breaks). 
 
-Things you may want to cover:
+[View Demo](https://teamtask.herokuapp.com/) 
 
-* Ruby version
+# How to setup
 
-* System dependencies
+First Clone repository `$ git clone git@github.com:torianne02/crawford-wedding-api.git`
 
-* Configuration
+Then, run the following:
+```ruby
+$ bundle install
+$ rake db:migrate
+$ rails s 
+```
+How to use the Team Tracker will be documented on the wiki.
 
-* Database creation
 
-* Database initialization
+## Stack
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ - Ruby on Rails 6.0.1
+ - PostgresQL 11.6
+ - Bulma Frontend CSS
+ 
+ ## Contribute
+Pull Request are Welcome!
