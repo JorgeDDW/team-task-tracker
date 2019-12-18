@@ -1,20 +1,15 @@
 class UsersController < ApplicationController
-    before_action :authenticate_user!
-  
-    def dashboard
+
+        
+    def new
     end
-  
-  
+    def edit      
+    end
+
     def show
     end
-  
-    def update
 
+    def update
     end
-  
-  end
-  
-  
-  
-  
-  
+end
+
