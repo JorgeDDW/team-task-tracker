@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
         
     def new
     end
@@ -11,3 +12,4 @@ class UsersController < ApplicationController
     def update
     end
 end
+

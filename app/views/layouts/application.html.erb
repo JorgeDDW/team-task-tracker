@@ -8,12 +8,13 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body >
+      <%= render "shared/navbar"%>
     <section class="section">
-
       <p class="is-warning"><%= notice %></p>
       <p class="is-danger"><%= alert %></p>
 
