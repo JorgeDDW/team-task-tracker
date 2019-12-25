@@ -1,4 +1,4 @@
-<%= form_with(model: task, local: true) do |form| %>
+<%= form_with(model: task, local: true ) do |form| %>
   <% if task.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(task.errors.count, "error") %> prohibited this task from being saved:</h2>
@@ -12,46 +12,25 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name, class: "label" %>
-    <%= form.text_field :name, class:"input" %>
+    <%= form.text_field :name, class:"input", placeholder: 'Title' %>
   </div>
 
   <div class="field">
-    <%= form.label :assigned %>
-    <%= form.text_field :assigned %>
+    <%= form.text_area :content, class:"textarea", placeholder: "Add Description" %>
+  </div>
+
+
+  <div class="field">
+    <%= form.text_field :tag , class: "tags",placeholder:"add tags, coma separated" %>
   </div>
 
   <div class="field">
-    <%= form.label :content, class: "label" %>
-    <%= form.text_area :content, class:"textarea" %>
+    
+    <%= form.date_field :due_date %>
   </div>
 
-  <div class="field">
-    <%= form.label :due_date %>
-    <%= form.date_select :due_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tag %>
-    <%= form.text_field :tag %>
-  </div>
-
-  <div class="field">
-    <%= form.label :status %>
-    <%= form.check_box :status %>
-  </div>
-
-  <div class="field">
-    <%= form.label :creator %>
-    <%= form.text_field :creator %>
-  </div>
-
-  <div class="field">
-    <%= form.label :time, class:"label" %>
-    <%= form.number_field :time %>
-  </div>
 
   <div class="actions">
-    <%= form.submit%>
+    <%= form.submit(class: "button is-primary") %>
   </div>
 <% end %>
