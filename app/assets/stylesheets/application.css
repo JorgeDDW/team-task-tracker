@@ -14,6 +14,9 @@
  *= require_self
  */
 
+ .background{
+    background: #F4F4F4;
+} 
  .navbar {
      position: fixed;
  }
@@ -42,4 +45,9 @@
 .navbar-burger{
     max-width: 20%;
     width: 20%;
+}
+
+.navbar-brand .navbar-burger{
+  
+    margin-left: 1em;
 }
