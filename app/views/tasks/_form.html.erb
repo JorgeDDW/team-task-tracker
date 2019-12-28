@@ -1,3 +1,6 @@
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bulma-tagsinput@2.0.0/dist/js/bulma-tagsinput.min.js">
+</script>
 <%= form_with(model: task, local: true ) do |form| %>
   <% if task.errors.any? %>
     <div id="error_explanation">
@@ -21,7 +24,7 @@
 
 
   <div class="field">
-    <%= form.text_field :tag , class: "tags",placeholder:"add tags, coma separated" %>
+    <%= form.text_field :all_tags, type: "tags", class: "tags",placeholder:"add tags, coma separated" %>
   </div>
 
   <div class="field">
@@ -34,3 +37,9 @@
     <%= form.submit(class: "button is-primary") %>
   </div>
 <% end %>
+
+
+
+<script>
+bulmaTagsinput.attach();
+</script>
