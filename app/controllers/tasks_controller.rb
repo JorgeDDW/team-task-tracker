@@ -1,4 +1,7 @@
 class TasksController < ApplicationController
+  before_action :authenticate_user!, except: [:show]
+  before_action :set_task, except: [:new, :create]
+  before_action :is_authorised, only: [:edit, :update, :destroy]
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   # GET /tasks
@@ -14,7 +17,8 @@ class TasksController < ApplicationController
 
   # GET /tasks/new
   def new
-    @task = Task.new
+    # @task = Task.new
+    @task = current_user.tasks.build
   end
 
   # GET /tasks/1/edit
@@ -24,7 +28,10 @@ class TasksController < ApplicationController
   # POST /tasks
   # POST /tasks.json
   def create
-    @task = Task.new(task_params)
+    # @task = Task.new(task_params)
+    # @task.creator_id = current_user.id
+    @task = current_user.task.build(task_params)
+    
 
     respond_to do |format|
       if @task.save

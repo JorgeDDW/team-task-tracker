@@ -1,6 +1,7 @@
 class Task < ApplicationRecord
     has_many :taggings
     has_many :tags, through: :taggings
+    # belongs_to :user
     
     def all_tags=(names)
         self.tags= names.split(",").map do |name|
