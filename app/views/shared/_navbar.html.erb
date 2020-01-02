@@ -31,12 +31,9 @@
               </a>
 
               <div class="navbar-dropdown">
-                <a class="navbar-item">
-                  Add Task
-                </a>
-                <a class="navbar-item">
-                  Task list
-                </a>
+                <%= link_to 'Add task', new_task_path, class: "navbar-item" %>
+                <%= link_to 'Task list', tasks_path, class: "navbar-item" %>
+
                 <a class="navbar-item">
                   History
                 </a>
@@ -46,15 +43,24 @@
           </div>
 
           <div class="navbar-end">
+          <% if !user_signed_in? %>
             <div class="navbar-item">
               <div class="buttons">
-                <a class="button is-primary">
-                  <strong>Sign up</strong>
-                </a>
-                <a class="button is-light">
-                  Log in
-                </a>
+                  <%= link_to 'Sign Up', new_user_registration_path, class: "button is-primary" %>
+                  <%= link_to 'Sign In', user_session_path, class: "button is-light" %>
               </div>
+            </div>
+          <% else %>  
+              <div class="navbar-item">
+                <div class="buttons">
+                    <%= link_to 'Account', edit_user_registration_path , class: "button is-light" %>
+                    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete , class: "button is-danger" %>
+                </div>
+              </div>
+
+          <% end %>
+
+            
             </div>
           </div>
         </div>
